@@ -12,6 +12,7 @@ gem 'sass-rails',      '~> 4.0.3'
 gem 'uglifier',        '~> 1.3.0'
 gem 'unicorn',         '4.8.3'
 
+
 # Assets
 gem 'rails-assets-bootstrap', '3.3.1'
 gem 'rails-assets-bootcards', '1.0.0'
