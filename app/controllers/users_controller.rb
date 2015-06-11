@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     time  = params[:time]
 
     @user = User.find_by_name(name)
-    if user.present?
+    if @user.present?
       @user.update(score: score) if user.score > score
     else
       @user = User.create!(name: name, score: score, datetime: time)
