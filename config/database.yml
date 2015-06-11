@@ -1,0 +1,19 @@
+scavanger_leaderboard_common: &scavanger_leaderboard_common
+  adapter: postgresql
+  encoding: utf8
+  host: localhost
+  password: password
+  pool: 5
+  username: postgres
+
+development:
+  <<: *scavanger_leaderboard_common
+  database: scavanger_leaderboard_common
+
+test:
+  <<: *scavanger_leaderboard_common
+  database: scavanger_leaderboard_common
+
+production:
+  <<: *scavanger_leaderboard_common
+  database: scavanger_leaderboard_common
