@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
+
+  respond_to :json
+
   def index
     @users = User.by_score
+
+    render json: @users
   end
 
   def create
