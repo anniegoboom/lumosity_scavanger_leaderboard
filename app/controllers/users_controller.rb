@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
     @user = User.find_by_name(name)
     if @user.present?
-      @user.update(score: score) if user.score > score
+      @user.update(score: score) if @user.score > score
     else
       @user = User.create!(name: name, score: score, datetime: time)
     end
