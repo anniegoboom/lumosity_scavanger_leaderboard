@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   def create
     name  = params[:user]
     score = params[:score].to_i
-    time  = DateTime.parse params[:time]
+    time_string = params[:time]
+    time = time_string.present? ? DateTime.parse(time_string) : nil
 
     @user = User.find_by_name(name)
     if @user.present?
