@@ -22,6 +22,6 @@ class UsersController < ApplicationController
       @user = User.create!(name: name, score: score, datetime: time)
     end
 
-    respond_with @user
+    render json: @user
   end
 end
